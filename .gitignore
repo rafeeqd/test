@@ -1,0 +1,8 @@
+*.exe
+*.terraform
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+rafeeq.txt
