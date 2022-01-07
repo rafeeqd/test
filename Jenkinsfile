@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('GitCheckout') {
-            Steps {
+            steps {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rafeeqd/terraform.git']]])
             }
         }
