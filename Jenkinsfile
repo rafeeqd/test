@@ -7,5 +7,10 @@ pipeline {
                 echo "hello loude did you get it now?"
             }
         }
+        stage('GitCheckout') {
+            Steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rafeeqd/terraform.git']]])
+            }
+        }
     }
 }
