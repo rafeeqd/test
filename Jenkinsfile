@@ -4,7 +4,10 @@ pipeline {
 
     stages {
         stage('Hello') {
-            checkout([
+            
+            steps {
+                echo "hello loude did you get it now?"
+                checkout([
                 $class: 'GitSCM',
                 branches: [[name: 'main']],
                 doGenerateSubmoduleConfigurations: false,
@@ -12,8 +15,6 @@ pipeline {
                 submoduleCfg: [],
                 userRemoteConfigs: [[url: 'https://github.com/rafeeqd/test.git']]
             ])
-            steps {
-                echo "hello loude did you get it now?"
             }
         }
     }
