@@ -12,7 +12,7 @@ pipeline {
                 $class: 'GitSCM',
                 branches: [[name: 'main']],
                 doGenerateSubmoduleConfigurations: false,
-                extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: "c:\temp\temp"], [$class: 'LocalBranch']],
+                extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: "tfcode"], [$class: 'LocalBranch']],
                 submoduleCfg: [],
                 userRemoteConfigs: [[url: 'https://github.com/rafeeqd/test.git']]
             ])
